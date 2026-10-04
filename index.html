@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Attendance Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Attendance Tracker</div>
+    <nav>
+      <a href="#students">Students</a>
+      <a href="#attendance">Attendance</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Academic Dashboard</p>
+        <h1>Track student attendance</h1>
+        <p>Monitor daily class attendance and monitor student performance quickly.</p>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat-card">
+        <span id="totalStudents">0</span>
+        <p>Total Students</p>
+      </div>
+
+      <div class="stat-card">
+        <span id="presentToday">0</span>
+        <p>Present Today</p>
+      </div>
+
+      <div class="stat-card">
+        <span id="absentToday">0</span>
+        <p>Absent Today</p>
+      </div>
+    </section>
+
+    <section class="panel" id="students">
+      <div class="panel-header">
+        <h2>Student Management</h2>
+      </div>
+
+      <form id="studentForm" class="student-form">
+        <input type="text" id="studentName" placeholder="Student name" required />
+        <input type="text" id="studentRoll" placeholder="Roll number" required />
+        <input type="text" id="studentClass" placeholder="Class / Section" required />
+        <button type="submit" class="primary-btn">Add Student</button>
+      </form>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search student or roll number" />
+      </div>
+
+      <div id="studentList" class="student-list"></div>
+    </section>
+
+    <section class="panel" id="attendance">
+      <div class="panel-header">
+        <h2>Mark Attendance</h2>
+      </div>
+
+      <div class="attendance-controls">
+        <input type="date" id="attendanceDate" />
+        <select id="subjectSelect">
+          <option value="Math">Math</option>
+          <option value="Physics">Physics</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="English">English</option>
+        </select>
+      </div>
+
+      <div id="attendanceTable" class="attendance-table"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
